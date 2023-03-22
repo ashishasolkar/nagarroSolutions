@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "dynamic-form-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/dynamicForm/DynamicFormWebPart.js",
+          "manifest": "./src/webparts/dynamicForm/DynamicFormWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "DynamicFormWebPartStrings": "lib/webparts/dynamicForm/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}

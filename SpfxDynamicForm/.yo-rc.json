@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.18.0",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.4.1"
+    },
+    "version": "1.16.1",
+    "libraryName": "spfx-dynamic-form",
+    "libraryId": "5a783bfd-f461-4424-b999-2afd862a492f",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-dynamic-form",
+    "solutionShortDescription": "spfx-dynamic-form description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
