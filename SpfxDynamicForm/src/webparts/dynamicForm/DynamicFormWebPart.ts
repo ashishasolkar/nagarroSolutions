@@ -11,6 +11,7 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'DynamicFormWebPartStrings';
 import DynamicForm from './components/DynamicForm';
 import { IDynamicFormProps } from './components/IDynamicFormProps';
+import { getSP } from './pnpjs-config';
 
 export interface IDynamicFormWebPartProps {
   description: string;
@@ -21,15 +22,17 @@ export default class DynamicFormWebPart extends BaseClientSideWebPart<IDynamicFo
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';
 
+
   public render(): void {
     const element: React.ReactElement<IDynamicFormProps> = React.createElement(
       DynamicForm,
       {
-        description: this.properties.description,
-        isDarkTheme: this._isDarkTheme,
-        environmentMessage: this._environmentMessage,
-        hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName
+        context: this.context
+        // description: this.properties.description,
+        // isDarkTheme: this._isDarkTheme,
+        // environmentMessage: this._environmentMessage,
+        // hasTeamsContext: !!this.context.sdks.microsoftTeams,
+        // userDisplayName: this.context.pageContext.user.displayName
       }
     );
 
@@ -37,6 +40,9 @@ export default class DynamicFormWebPart extends BaseClientSideWebPart<IDynamicFo
   }
 
   protected onInit(): Promise<void> {
+    //Initialize our _sp object that we can then use in other packages without having to pass around the context.
+    //  Check out pnpjsConfig.ts for an example of a project setup file.
+    getSP(this.context);
     return this._getEnvironmentMessage().then(message => {
       this._environmentMessage = message;
     });
