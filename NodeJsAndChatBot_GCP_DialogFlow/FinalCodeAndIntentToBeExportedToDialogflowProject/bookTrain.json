@@ -1,0 +1,191 @@
+{
+  "id": "3fea27bd-2c11-4def-8439-ba363db6f8f4",
+  "name": "bookTrain",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "bookTrain-followup",
+          "lifespan": 2
+        },
+        {
+          "name": "await_TravelDate",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "Origin",
+          "dataType": "@sys.geo-city",
+          "isList": false,
+          "required": false,
+          "prompts": [
+            "What is the origin of train?"
+          ],
+          "value": "$Origin",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "Destination",
+          "dataType": "@sys.geo-city",
+          "isList": false,
+          "required": false,
+          "prompts": [
+            "What's the destination of train?"
+          ],
+          "value": "$Destination",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "book a train from ",
+          "userDefined": false
+        },
+        {
+          "text": "mumbai",
+          "userDefined": true,
+          "alias": "Origin",
+          "meta": "@sys.geo-city"
+        }
+      ],
+      "count": 1,
+      "id": "2496de5b-d002-4cfd-a843-4d71b3b71923",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "book a train to ",
+          "userDefined": false
+        },
+        {
+          "text": "pune",
+          "userDefined": false,
+          "alias": "Destination",
+          "meta": "@sys.geo-city"
+        }
+      ],
+      "count": 0,
+      "id": "76529ca7-ef1f-45e3-b410-8266065cda96",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "book a train from ",
+          "userDefined": false
+        },
+        {
+          "text": "mumbai",
+          "userDefined": true,
+          "alias": "Origin",
+          "meta": "@sys.geo-city"
+        },
+        {
+          "text": " to ",
+          "userDefined": false
+        },
+        {
+          "text": "pune",
+          "userDefined": true,
+          "alias": "Destination",
+          "meta": "@sys.geo-city"
+        }
+      ],
+      "count": 0,
+      "id": "3d702232-c5ce-4fbf-88e8-232266f995fa",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "train ticket",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "0a113ed9-7d3b-4f24-9886-461958c00a6b",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "book train",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "f62f34ee-5569-49f6-8222-71103ba5e41e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "book train ticket",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "89e9be94-e4b7-460d-97f1-e62770992bab",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "book a train",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "48eca827-95cf-4bf0-9381-771b5c986abe",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": true
+}
